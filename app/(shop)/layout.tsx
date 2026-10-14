@@ -1,7 +1,9 @@
 import { CookieBanner } from "@/components/layout/CookieBanner";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { MiniCart } from "@/components/layout/MiniCart";
 import { MobileTabBar } from "@/components/layout/MobileTabBar";
+import { Toaster } from "@/components/layout/Toaster";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { getSiteSettings } from "@/lib/content";
 
@@ -19,6 +21,8 @@ export default async function ShopLayout({ children }: { children: React.ReactNo
       <MobileTabBar />
       <WhatsAppButton />
       <CookieBanner />
+      <MiniCart />
+      <Toaster />
     </>
   );
 }

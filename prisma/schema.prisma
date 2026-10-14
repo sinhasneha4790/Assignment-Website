@@ -315,6 +315,12 @@ model Product {
   gsm            Int?
   care           String?
   fit            String?
+  /// Filter facet, e.g. Linen, Cotton, Viscose
+  fabricType     String?
+  /// e.g. "Fits true to size · Regular fit, slightly longer back"
+  fitNote        String?
+  /// e.g. "Model is 5′6″ and wears M"
+  modelInfo      String?
   hubId          String
   categoryId     String
   line           Line?
@@ -326,6 +332,13 @@ model Product {
   seoTitle       String?
   seoDescription String?
   sizeChartId    String?
+  /// Merchandising order for "Recommended"; lower first.
+  sort           Int           @default(0)
+  /// Denormalised from published reviews.
+  ratingAvg      Float         @default(0)
+  ratingCount    Int           @default(0)
+  /// Lower-cased name, category, hub, line, fabric and colours for trigram search.
+  searchText     String        @default("")
   publishedAt    DateTime?
   createdAt      DateTime      @default(now())
   updatedAt      DateTime      @updatedAt
@@ -342,6 +355,7 @@ model Product {
 
   @@index([hubId, line, status])
   @@index([categoryId, status])
+  @@index([searchText(ops: raw("gin_trgm_ops"))], type: Gin)
 }
 
 model ProductImage {
@@ -364,6 +378,8 @@ model Colour {
   productId String
   name      String
   hex       String
+  /// Swatch family used by the colour filter, e.g. Ecru, Olive, Navy
+  family    String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 

@@ -20,6 +20,8 @@ export type ProductCardData = {
   alt: string;
   badge: string | null;
   note: string;
+  /** Colour dots under the card (hub "Trending now"). */
+  swatches?: { name: string; hex: string }[];
 };
 
 export type Lookbook = { slug: string; title: string; image: string; alt: string; pieces: number; total: number };

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useSyncExternalStore, useState } from "react";
 import { buttonClass } from "@/components/ui/Button";
+import { setClientCookie, YEAR } from "@/lib/client-cookie";
 
 const COOKIE = "ff_consent";
 
@@ -15,7 +16,7 @@ export function CookieBanner() {
   if (decided || dismissed) return null;
 
   const choose = (value: "all" | "essential") => {
-    document.cookie = `${COOKIE}=${value}; Path=/; Max-Age=31536000; SameSite=Lax; Secure`;
+    setClientCookie(COOKIE, value, YEAR);
     setDismissed(true);
   };
 
