@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your bag — Folk &amp; Form</title>
+<link rel="stylesheet" href="assets/ff.css">
+<link rel="stylesheet" href="assets/responsive.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap">
+<style>body{margin:0}</style>
+</head>
+<body>
+<div id="app"></div>
+<noscript><p style="padding:24px">Please turn on JavaScript to view this page.</p></noscript>
+<template id="tpl-Header">
+<header style="width:100%;background:#FBF8F3;border-bottom:1px solid #DDD5C7;font-family:'Manrope',sans-serif;color:#26251F">
+<div style="background:#26251F;color:#FBF8F3;text-align:center;font-size:12px;letter-spacing:.08em;padding:9px 16px">Free delivery over ₹2,999 · Pay by UPI, card or cash on delivery · Free styling sessions</div>
+<div class="wrap" style="display:flex;align-items:center;gap:28px;min-height:72px;flex-wrap:wrap;padding-top:4px;padding-bottom:4px">
+<a href="index.html" class="serif" style="font-size:28px;white-space:nowrap">Folk &amp; Form</a>
+<nav aria-label="Main" style="display:flex;gap:22px;flex-wrap:wrap;font-size:14px;font-weight:500;flex:1 1 380px">
+<a href="hub-women.html">Women</a>
+<a href="hub-women.html">Men</a>
+<a href="hub-women.html">Teens</a>
+<a href="listing.html">Work</a>
+<a href="listing.html">Weekend</a>
+<a href="listing.html">New in</a>
+<a href="listing.html" style="color:#9A5534">Sale</a>
+</nav>
+<div style="display:flex;align-items:center;gap:2px">
+<a href="styling.html" style="font-size:13px;font-weight:700;margin-right:10px;border-bottom:1px solid #26251F">Book a stylist</a>
+<a href="search.html" aria-label="Search" style="width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></a>
+<a href="login.html" aria-label="Account" style="width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg></a>
+<a href="account.html" aria-label="Wishlist" style="width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"></path></svg></a>
+<a href="cart.html" aria-label="Bag, 2 items" style="width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;position:relative"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg><span style="position:absolute;top:6px;right:4px;background:#4F5D43;color:#fff;font-size:10px;font-weight:700;min-width:16px;height:16px;border-radius:8px;display:flex;align-items:center;justify-content:center">2</span></a>
+</div>
+</div>
+</header>
+</template>
+<template id="tpl-Footer">
+<footer style="width:100%;background:#26251F;color:#E9E4D8;font-family:'Manrope',sans-serif;padding:56px 0 28px">
+<div class="wrap" style="display:flex;flex-wrap:wrap;gap:48px">
+<div style="flex:1 1 300px;display:flex;flex-direction:column;gap:14px">
+<div class="serif" style="font-size:30px;color:#FBF8F3">Folk &amp; Form</div>
+<p style="font-size:14px;color:#C9C3B5">Dressed for the desk, made for the weekend. New drops and styling notes, once a fortnight.</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<label for="ft-email" style="position:absolute;left:-9999px">Email address</label>
+<input id="ft-email" type="email" placeholder="Your email" style="flex:1 1 180px;background:transparent;color:#FBF8F3;border-color:#6E6A5E">
+<button class="btn" style="background:#FBF8F3;color:#26251F;border-color:#FBF8F3">Subscribe</button>
+</div>
+</div>
+<nav aria-label="Shop" style="flex:1 1 140px;display:flex;flex-direction:column;gap:10px;font-size:14px">
+<div class="eyebrow" style="color:#A8A296">Shop</div>
+<a href="hub-women.html" style="color:#E9E4D8">Women</a><a href="hub-women.html" style="color:#E9E4D8">Men</a><a href="hub-women.html" style="color:#E9E4D8">Teens</a><a href="listing.html" style="color:#E9E4D8">New in</a><a href="listing.html" style="color:#E9E4D8">Sale</a><a href="listing.html" style="color:#E9E4D8">Gift cards</a>
+</nav>
+<nav aria-label="Help" style="flex:1 1 140px;display:flex;flex-direction:column;gap:10px;font-size:14px">
+<div class="eyebrow" style="color:#A8A296">Help</div>
+<a href="help.html" style="color:#E9E4D8">Help centre</a><a href="help.html" style="color:#E9E4D8">Track order</a><a href="size-guide.html" style="color:#E9E4D8">Size guides</a><a href="help.html" style="color:#E9E4D8">Shipping</a><a href="help.html" style="color:#E9E4D8">Returns &amp; exchanges</a><a href="help.html" style="color:#E9E4D8">Contact us</a>
+</nav>
+<nav aria-label="Company" style="flex:1 1 140px;display:flex;flex-direction:column;gap:10px;font-size:14px">
+<div class="eyebrow" style="color:#A8A296">Folk &amp; Form</div>
+<a href="about.html" style="color:#E9E4D8">About us</a><a href="styling.html" style="color:#E9E4D8">Book a stylist</a><a href="about.html" style="color:#E9E4D8">Journal</a><a href="about.html" style="color:#E9E4D8">Stores</a><a href="about.html" style="color:#E9E4D8">Careers</a>
+</nav>
+</div>
+<div class="wrap" style="margin-top:44px;padding-top:20px;border-top:1px solid #4A473F;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;font-size:12px;color:#A8A296">
+<span>© 2026 Folk &amp; Form · folknform.com</span>
+<span>UPI · Cards · Net banking · Wallets · Cash on delivery · EMI</span>
+<span><a href="help.html" style="color:#A8A296">Privacy</a> · <a href="help.html" style="color:#A8A296">Terms</a> · <a href="help.html" style="color:#A8A296">Cookies</a> · <a href="help.html" style="color:#A8A296">Booking policy</a></span>
+</div>
+</footer>
+</template>
+<template id="tpl-Cart">
+<div style="width:100%;background:#F5F0E8">
+<div style="position:sticky;top:0;z-index:50;box-shadow:0 2px 12px rgba(38,37,31,.08)"><dc-import name="Header" hint-size="100%,112px"></dc-import></div>
+<section class="wrap" style="padding-top:40px;padding-bottom:72px;display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start">
+<div style="flex:999 1 560px;min-width:0;display:flex;flex-direction:column;gap:20px">
+<h1 class="serif" style="font-size:44px">Your bag <span class="muted" style="font-size:22px">({{count}} items)</span></h1>
+<div class="card" style="padding:16px 20px;display:flex;flex-direction:column;gap:8px">
+<div class="small">{{shipMsg}}</div>
+<div style="height:6px;background:#DDD5C7;border-radius:3px"><div style="height:100%;width:{{shipPct}};background:#4F5D43;border-radius:3px"></div></div>
+</div>
+<sc-for list="{{items}}" as="it" hint-placeholder-count="2">
+<div style="display:flex;gap:20px;padding:20px 0;border-bottom:1px solid #DDD5C7;flex-wrap:wrap">
+<a href="product.html" class="pic" style="width:120px;height:160px;flex:none"><img src="{{it.img}}" alt="{{it.name}}"></a>
+<div style="flex:1 1 260px;display:flex;flex-direction:column;gap:6px">
+<div style="display:flex;justify-content:space-between;gap:12px"><a href="product.html" style="font-weight:700">{{it.name}}</a><span class="price">{{it.total}}</span></div>
+<div class="small muted">{{it.meta}}</div>
+<div class="small" style="color:#4F5D43">In stock · Delivery by Fri, 16 Oct</div>
+<div style="display:flex;gap:16px;align-items:center;margin-top:auto;flex-wrap:wrap">
+<div style="display:flex;align-items:center;border:1px solid #BDB4A4;background:#fff">
+<button aria-label="Decrease quantity" onClick="{{it.dec}}" style="width:44px;height:44px;border:0;background:none;font-size:18px;cursor:pointer;color:#26251F">−</button>
+<span style="min-width:28px;text-align:center;font-weight:600">{{it.qty}}</span>
+<button aria-label="Increase quantity" onClick="{{it.inc}}" style="width:44px;height:44px;border:0;background:none;font-size:18px;cursor:pointer;color:#26251F">+</button>
+</div>
+<button class="small" style="background:none;border:0;text-decoration:underline;cursor:pointer;color:#26251F;min-height:44px">Move to wishlist</button>
+<button class="small" style="background:none;border:0;text-decoration:underline;cursor:pointer;color:#5C584E;min-height:44px">Remove</button>
+</div>
+</div>
+</div>
+</sc-for>
+<label class="check"><input type="checkbox"> Add gift wrap with a handwritten note (+₹99)</label>
+</div>
+
+<aside style="flex:1 1 340px;display:flex;flex-direction:column;gap:16px">
+<div class="card" style="display:flex;flex-direction:column;gap:14px">
+<h2 class="serif" style="font-size:24px">Order summary</h2>
+<div style="display:flex;gap:8px"><label for="coupon" style="position:absolute;left:-9999px">Coupon code</label><input id="coupon" placeholder="Coupon code"><button class="btn btn-line">Apply</button></div>
+<div style="display:flex;justify-content:space-between"><span>Subtotal</span><span>{{subtotal}}</span></div>
+<div style="display:flex;justify-content:space-between"><span>Discount</span><span style="color:#4F5D43">− ₹0</span></div>
+<div style="display:flex;justify-content:space-between"><span>Delivery</span><span>{{delivery}}</span></div>
+<div class="small muted">Prices include GST</div>
+<hr class="rule">
+<div style="display:flex;justify-content:space-between;font-size:18px;font-weight:700"><span>Total</span><span>{{total}}</span></div>
+<a href="checkout.html" class="btn btn-block">Checkout securely</a>
+<div class="small muted" style="text-align:center">UPI · Cards · Net banking · Wallets · COD · EMI</div>
+</div>
+<div class="card" style="padding:16px"><div style="font-weight:700">Free returns &amp; size exchanges</div><div class="small muted">Within 15 days of delivery. Pickup from your door.</div></div>
+</aside>
+</section>
+<section class="wrap" style="padding-bottom:72px">
+<h2 class="serif" style="font-size:28px;margin-bottom:18px">Goes well with</h2>
+<div class="grid4">
+<a href="product.html" class="stack" style="gap:8px"><div class="pic" style="aspect-ratio:1/1"><img src="images/p-belt.svg" alt="Woven Leather Belt"></div><span>Woven Leather Belt · <b>₹1,290</b></span></a>
+<a href="product.html" class="stack" style="gap:8px"><div class="pic" style="aspect-ratio:1/1"><img src="images/p-scarf.svg" alt="Silk Twill Scarf"></div><span>Silk Twill Scarf · <b>₹1,490</b></span></a>
+<a href="product.html" class="stack" style="gap:8px"><div class="pic" style="aspect-ratio:1/1"><img src="images/p-loafer.svg" alt="Leather Loafer"></div><span>Leather Loafer · <b>₹3,990</b></span></a>
+<a href="product.html" class="stack" style="gap:8px"><div class="pic" style="aspect-ratio:1/1"><img src="images/p-tote.svg" alt="Canvas Work Tote"></div><span>Canvas Work Tote · <b>₹1,990</b></span></a>
+</div>
+</section>
+<dc-import name="Footer" hint-size="100%,420px"></dc-import>
+</div>
+</template>
+<script src="assets/dc-runtime.js"></script>
+<script>
+window.DC_IMAGES = {"0a5a91c1978472a6a63392ef61d9e03d":"images/p-belt.svg","5f06fcb7b57a96cc9bf01c913a4bd3b0":"images/p-blazer-dark.svg","8548b627c2ede5716356e827cba4afb1":"images/p-blazer.svg","405eb3754825ef2065cb32d5eb3a2f0e":"images/p-blouse.svg","75ba8083572feb6c570a44c02408a536":"images/p-chino.svg","a09dff6fec776cbc65d017f2a2385355":"images/p-dress-shirt.svg","ca4e6c2b802d7c0d7400d2687d131b5a":"images/p-dress-tier.svg","bb2676bb82953c9b4ac9a480e942c2ef":"images/p-jeans.svg","7986fa0adc8356b1c35165207f01c2ed":"images/p-knit-oat.svg","fdc30acd247fb4616541596f28c27baf":"images/p-knit.svg","43a0dd193ffd4b438a8c113904142014":"images/p-loafer.svg","bc17760d122de30f31cea51732f0afb6":"images/p-overshirt-olive.svg","b7609bd6df1b7f220c37a983f41e1126":"images/p-overshirt.svg","08998cb4fc648039b515a3bb1cc2145a":"images/p-polo.svg","5c506d5ea511b727eec0a2e398831ef5":"images/p-scarf.svg","6753dadb7329ed49e396cfe21cfeecba":"images/p-shirt-ecru.svg","429eba4fce063b85e288bbceced236be":"images/p-shirt-navy.svg","2ae98cfc8e93c851770c8b3ad866392b":"images/p-shirt-rust.svg","a1b02ce1d53a103daf64a90197a767a4":"images/p-shirt-sage.svg","9a7531df94019645931f9e11a808d1b4":"images/p-shirt-stripe.svg","ba3677ff81245a3842f43c2821694e6f":"images/p-tee-white.svg","d69e07880dd9291596554e9cddb3931b":"images/p-tee.svg","c6fda341961213f729b78fe72922ad0c":"images/p-tote.svg","864029471cec5d35eaab4fb37e50b988":"images/p-trouser-olive.svg","9f2fba091b57283d303e0e3e3ab0b152":"images/p-trouser-stone.svg","f037a18b30f07369202c33bbd24e4cf1":"images/s-duo.svg","9cd5cf73faefde3e5283459685b8591b":"images/s-man-cafe.svg","3a8c2dd9822ace0d05cc5240a05cf613":"images/s-man-suit.svg","c530f8ade21e65f27d2c4b054eb20b2c":"images/s-stylist.svg","1abe807593ab673c0df3304fbcf6a7c9":"images/s-teen.svg","b68ce9ef353b8386d2abcde0e995202f":"images/s-trio.svg","f6c03ffc8b9ff813299635c13fac3b6a":"images/s-woman-dress.svg","138c22cbc284c611bea5f5782b2426ca":"images/s-woman-weekend.svg","c6fe75be85eec019bee7f4251405fcb4":"images/s-woman-work.svg"};
+DC.define("Header", (function () {
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+return Component;
+})());
+DC.define("Footer", (function () {
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+return Component;
+})());
+DC.define("Cart", (function () {
+class Component extends DCLogic {
+renderVals() {
+const st = this.state || {};
+const base = [
+{ id: 'a', name: 'Linen Workday Shirt', meta: 'Ecru · Size M · Women · Professional', price: 2490, img: 'images/p-shirt-ecru.svg' },
+{ id: 'b', name: 'Pleated Wide Trouser', meta: 'Olive · Size 30 · Women · Professional', price: 3290, img: 'images/p-trouser-olive.svg' }
+];
+const fmt = (n) => '₹' + n.toLocaleString('en-IN');
+let sub = 0, count = 0;
+const items = base.map((b) => {
+const q = (st[b.id] == null ? 1 : st[b.id]);
+sub += q * b.price; count += q;
+return { name: b.name, meta: b.meta, img: b.img, qty: q, total: fmt(q * b.price),
+inc: () => this.setState({ [b.id]: q + 1 }), dec: () => this.setState({ [b.id]: Math.max(1, q - 1) }) };
+});
+const free = 2999;
+const left = Math.max(0, free - sub);
+return {
+items, count, subtotal: fmt(sub),
+delivery: left === 0 ? 'Free' : fmt(99),
+total: fmt(sub + (left === 0 ? 0 : 99)),
+shipMsg: left === 0 ? 'You have free delivery.' : 'Add ' + fmt(left) + ' more for free delivery.',
+shipPct: Math.min(100, Math.round(sub / free * 100)) + '%'
+};
+}
+}
+return Component;
+})());
+DC.mount("Cart");
+</script>
+</body>
+</html>

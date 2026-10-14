@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin dashboard — Folk &amp; Form</title>
+<link rel="stylesheet" href="assets/ff.css">
+<link rel="stylesheet" href="assets/responsive.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap">
+<style>body{margin:0}</style>
+</head>
+<body>
+<div id="app"></div>
+<noscript><p style="padding:24px">Please turn on JavaScript to view this page.</p></noscript>
+<template id="tpl-Admin">
+<div style="width:100%;min-height:1200px;background:#F2EEE6;display:flex;flex-wrap:wrap">
+<nav aria-label="Admin" style="flex:1 1 220px;max-width:240px;background:#26251F;color:#E9E4D8;padding:24px 14px;display:flex;flex-direction:column;gap:2px">
+<div class="serif" style="font-size:22px;color:#FBF8F3;padding:0 10px 18px">Folk &amp; Form <span style="font-family:'Manrope';font-size:11px;letter-spacing:.1em;color:#A8A296">ADMIN</span></div>
+<sc-for list="{{nav}}" as="n" hint-placeholder-count="11"><button onClick="{{n.pick}}" style="text-align:left;min-height:42px;padding:0 12px;border:0;border-radius:2px;background:{{n.bg}};color:{{n.fg}};font:500 14px 'Manrope',sans-serif;cursor:pointer">{{n.name}}</button></sc-for>
+<div style="margin-top:auto;padding:16px 10px 0;font-size:12px;color:#A8A296">Signed in as Owner · 2-step on</div>
+</nav>
+<main style="flex:999 1 640px;min-width:0;padding:28px 32px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+<div><h1 class="serif" style="font-size:32px">{{section}}</h1><div class="small muted">Tuesday, 13 October 2026</div></div>
+<div style="display:flex;gap:8px"><select aria-label="Period" style="width:150px"><option>Today</option><option>Last 7 days</option><option>Last 30 days</option></select><button class="btn">+ Add product</button></div>
+</div>
+
+<div class="grid4" style="gap:16px">
+<div class="card" style="padding:18px"><div class="eyebrow">Sales</div><div class="serif" style="font-size:30px">₹84,320</div><div class="small" style="color:#4F5D43">▲ 12% vs last Tue</div></div>
+<div class="card" style="padding:18px"><div class="eyebrow">Orders</div><div class="serif" style="font-size:30px">27</div><div class="small muted">Avg ₹3,123 · 6 COD</div></div>
+<div class="card" style="padding:18px"><div class="eyebrow">Bookings today</div><div class="serif" style="font-size:30px">9</div><div class="small muted">5 store · 4 video</div></div>
+<div class="card" style="padding:18px"><div class="eyebrow">Returns open</div><div class="serif" style="font-size:30px">4</div><div class="small" style="color:#8A4A2B">2 need approval</div></div>
+</div>
+
+<div class="card" style="padding:0;overflow-x:auto">
+<div style="display:flex;justify-content:space-between;align-items:center;padding:16px 18px"><b>Latest orders</b><a href="admin.html" class="small" style="text-decoration:underline">All orders</a></div>
+<table class="tbl">
+<thead><tr><th>Order</th><th>Customer</th><th>Items</th><th>Total</th><th>Payment</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td style="font-weight:700">#FF-104238</td><td>Priya Sharma</td><td>2</td><td>₹5,780</td><td>UPI</td><td><span class="pill">Shipped</span></td></tr>
+<tr><td style="font-weight:700">#FF-104237</td><td>Rahul Medhi</td><td>1</td><td>₹2,990</td><td>COD</td><td><span class="pill grey">To pack</span></td></tr>
+<tr><td style="font-weight:700">#FF-104236</td><td>Neha Baruah</td><td>3</td><td>₹7,470</td><td>Card</td><td><span class="pill grey">To pack</span></td></tr>
+<tr><td style="font-weight:700">#FF-104235</td><td>Ankita Das</td><td>1</td><td>₹5,490</td><td>EMI</td><td><span class="pill warn">Payment pending</span></td></tr>
+<tr><td style="font-weight:700">#FF-104234</td><td>Kabir Nath</td><td>2</td><td>₹4,680</td><td>UPI</td><td><span class="pill">Delivered</span></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="grid2" style="gap:16px">
+<div class="card" style="display:flex;flex-direction:column;gap:10px">
+<b>Today’s styling bookings</b>
+<div style="display:flex;justify-content:space-between" class="small"><span>11:00 · Work capsule · Priya S.</span><span class="pill">Meera</span></div>
+<div style="display:flex;justify-content:space-between" class="small"><span>12:30 · Video audit · Rahul M.</span><span class="pill grey">Arjun</span></div>
+<div style="display:flex;justify-content:space-between" class="small"><span>14:00 · Festive planning · Ankita D.</span><span class="pill warn">Riya</span></div>
+<div style="display:flex;justify-content:space-between" class="small"><span>17:00 · Style workshop · 8/10 seats</span><span class="pill grey">All</span></div>
+<a href="admin.html" class="small" style="text-decoration:underline">Open calendar</a>
+</div>
+<div class="card" style="display:flex;flex-direction:column;gap:10px">
+<b>Low stock</b>
+<div style="display:flex;gap:12px;align-items:center"><div class="pic" style="width:40px;height:52px;flex:none"><img src="images/p-shirt-ecru.svg" alt=""></div><span class="small" style="flex:1">Linen Workday Shirt · Ecru · M</span><span class="small" style="color:#8A4A2B;font-weight:700">3 left</span></div>
+<div style="display:flex;gap:12px;align-items:center"><div class="pic" style="width:40px;height:52px;flex:none"><img src="images/p-blazer.svg" alt=""></div><span class="small" style="flex:1">Soft-shoulder Blazer · Camel · S</span><span class="small" style="color:#8A4A2B;font-weight:700">2 left</span></div>
+<div style="display:flex;gap:12px;align-items:center"><div class="pic" style="width:40px;height:52px;flex:none"><img src="images/p-jeans.svg" alt=""></div><span class="small" style="flex:1">Straight Leg Jeans · Indigo · 30</span><span class="small" style="color:#8A4A2B;font-weight:700">4 left</span></div>
+<a href="admin.html" class="small" style="text-decoration:underline">Restock in Inventory</a>
+</div>
+</div>
+</main>
+</div>
+</template>
+<script src="assets/dc-runtime.js"></script>
+<script>
+window.DC_IMAGES = {"0a5a91c1978472a6a63392ef61d9e03d":"images/p-belt.svg","5f06fcb7b57a96cc9bf01c913a4bd3b0":"images/p-blazer-dark.svg","8548b627c2ede5716356e827cba4afb1":"images/p-blazer.svg","405eb3754825ef2065cb32d5eb3a2f0e":"images/p-blouse.svg","75ba8083572feb6c570a44c02408a536":"images/p-chino.svg","a09dff6fec776cbc65d017f2a2385355":"images/p-dress-shirt.svg","ca4e6c2b802d7c0d7400d2687d131b5a":"images/p-dress-tier.svg","bb2676bb82953c9b4ac9a480e942c2ef":"images/p-jeans.svg","7986fa0adc8356b1c35165207f01c2ed":"images/p-knit-oat.svg","fdc30acd247fb4616541596f28c27baf":"images/p-knit.svg","43a0dd193ffd4b438a8c113904142014":"images/p-loafer.svg","bc17760d122de30f31cea51732f0afb6":"images/p-overshirt-olive.svg","b7609bd6df1b7f220c37a983f41e1126":"images/p-overshirt.svg","08998cb4fc648039b515a3bb1cc2145a":"images/p-polo.svg","5c506d5ea511b727eec0a2e398831ef5":"images/p-scarf.svg","6753dadb7329ed49e396cfe21cfeecba":"images/p-shirt-ecru.svg","429eba4fce063b85e288bbceced236be":"images/p-shirt-navy.svg","2ae98cfc8e93c851770c8b3ad866392b":"images/p-shirt-rust.svg","a1b02ce1d53a103daf64a90197a767a4":"images/p-shirt-sage.svg","9a7531df94019645931f9e11a808d1b4":"images/p-shirt-stripe.svg","ba3677ff81245a3842f43c2821694e6f":"images/p-tee-white.svg","d69e07880dd9291596554e9cddb3931b":"images/p-tee.svg","c6fda341961213f729b78fe72922ad0c":"images/p-tote.svg","864029471cec5d35eaab4fb37e50b988":"images/p-trouser-olive.svg","9f2fba091b57283d303e0e3e3ab0b152":"images/p-trouser-stone.svg","f037a18b30f07369202c33bbd24e4cf1":"images/s-duo.svg","9cd5cf73faefde3e5283459685b8591b":"images/s-man-cafe.svg","3a8c2dd9822ace0d05cc5240a05cf613":"images/s-man-suit.svg","c530f8ade21e65f27d2c4b054eb20b2c":"images/s-stylist.svg","1abe807593ab673c0df3304fbcf6a7c9":"images/s-teen.svg","b68ce9ef353b8386d2abcde0e995202f":"images/s-trio.svg","f6c03ffc8b9ff813299635c13fac3b6a":"images/s-woman-dress.svg","138c22cbc284c611bea5f5782b2426ca":"images/s-woman-weekend.svg","c6fe75be85eec019bee7f4251405fcb4":"images/s-woman-work.svg"};
+DC.define("Admin", (function () {
+class Component extends DCLogic {
+renderVals() {
+const cur = (this.state && this.state.s) || 'Dashboard';
+const items = ['Dashboard', 'Orders', 'Products', 'Inventory', 'Customers', 'Bookings', 'Discounts & gift cards', 'Content', 'Reviews', 'Reports', 'Settings'];
+return {
+section: cur,
+nav: items.map((n) => ({ name: n, bg: n === cur ? '#4F5D43' : 'transparent', fg: n === cur ? '#FFFFFF' : '#E9E4D8', pick: () => this.setState({ s: n }) }))
+};
+}
+}
+return Component;
+})());
+DC.mount("Admin");
+</script>
+</body>
+</html>

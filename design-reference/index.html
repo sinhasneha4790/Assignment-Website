@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Folk &amp; Form — Home</title>
+<link rel="stylesheet" href="assets/ff.css">
+<link rel="stylesheet" href="assets/responsive.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap">
+<style>body{margin:0}</style>
+</head>
+<body>
+<div id="app"></div>
+<noscript><p style="padding:24px">Please turn on JavaScript to view this page.</p></noscript>
+<template id="tpl-Header">
+<header style="width:100%;background:#FBF8F3;border-bottom:1px solid #DDD5C7;font-family:'Manrope',sans-serif;color:#26251F">
+<div style="background:#26251F;color:#FBF8F3;text-align:center;font-size:12px;letter-spacing:.08em;padding:9px 16px">Free delivery over ₹2,999 · Pay by UPI, card or cash on delivery · Free styling sessions</div>
+<div class="wrap" style="display:flex;align-items:center;gap:28px;min-height:72px;flex-wrap:wrap;padding-top:4px;padding-bottom:4px">
+<a href="index.html" class="serif" style="font-size:28px;white-space:nowrap">Folk &amp; Form</a>
+<nav aria-label="Main" style="display:flex;gap:22px;flex-wrap:wrap;font-size:14px;font-weight:500;flex:1 1 380px">
+<a href="hub-women.html">Women</a>
+<a href="hub-women.html">Men</a>
+<a href="hub-women.html">Teens</a>
+<a href="listing.html">Work</a>
+<a href="listing.html">Weekend</a>
+<a href="listing.html">New in</a>
+<a href="listing.html" style="color:#9A5534">Sale</a>
+</nav>
+<div style="display:flex;align-items:center;gap:2px">
+<a href="styling.html" style="font-size:13px;font-weight:700;margin-right:10px;border-bottom:1px solid #26251F">Book a stylist</a>
+<a href="search.html" aria-label="Search" style="width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></a>
+<a href="login.html" aria-label="Account" style="width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg></a>
+<a href="account.html" aria-label="Wishlist" style="width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"></path></svg></a>
+<a href="cart.html" aria-label="Bag, 2 items" style="width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;position:relative"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg><span style="position:absolute;top:6px;right:4px;background:#4F5D43;color:#fff;font-size:10px;font-weight:700;min-width:16px;height:16px;border-radius:8px;display:flex;align-items:center;justify-content:center">2</span></a>
+</div>
+</div>
+</header>
+</template>
+<template id="tpl-Footer">
+<footer style="width:100%;background:#26251F;color:#E9E4D8;font-family:'Manrope',sans-serif;padding:56px 0 28px">
+<div class="wrap" style="display:flex;flex-wrap:wrap;gap:48px">
+<div style="flex:1 1 300px;display:flex;flex-direction:column;gap:14px">
+<div class="serif" style="font-size:30px;color:#FBF8F3">Folk &amp; Form</div>
+<p style="font-size:14px;color:#C9C3B5">Dressed for the desk, made for the weekend. New drops and styling notes, once a fortnight.</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<label for="ft-email" style="position:absolute;left:-9999px">Email address</label>
+<input id="ft-email" type="email" placeholder="Your email" style="flex:1 1 180px;background:transparent;color:#FBF8F3;border-color:#6E6A5E">
+<button class="btn" style="background:#FBF8F3;color:#26251F;border-color:#FBF8F3">Subscribe</button>
+</div>
+</div>
+<nav aria-label="Shop" style="flex:1 1 140px;display:flex;flex-direction:column;gap:10px;font-size:14px">
+<div class="eyebrow" style="color:#A8A296">Shop</div>
+<a href="hub-women.html" style="color:#E9E4D8">Women</a><a href="hub-women.html" style="color:#E9E4D8">Men</a><a href="hub-women.html" style="color:#E9E4D8">Teens</a><a href="listing.html" style="color:#E9E4D8">New in</a><a href="listing.html" style="color:#E9E4D8">Sale</a><a href="listing.html" style="color:#E9E4D8">Gift cards</a>
+</nav>
+<nav aria-label="Help" style="flex:1 1 140px;display:flex;flex-direction:column;gap:10px;font-size:14px">
+<div class="eyebrow" style="color:#A8A296">Help</div>
+<a href="help.html" style="color:#E9E4D8">Help centre</a><a href="help.html" style="color:#E9E4D8">Track order</a><a href="size-guide.html" style="color:#E9E4D8">Size guides</a><a href="help.html" style="color:#E9E4D8">Shipping</a><a href="help.html" style="color:#E9E4D8">Returns &amp; exchanges</a><a href="help.html" style="color:#E9E4D8">Contact us</a>
+</nav>
+<nav aria-label="Company" style="flex:1 1 140px;display:flex;flex-direction:column;gap:10px;font-size:14px">
+<div class="eyebrow" style="color:#A8A296">Folk &amp; Form</div>
+<a href="about.html" style="color:#E9E4D8">About us</a><a href="styling.html" style="color:#E9E4D8">Book a stylist</a><a href="about.html" style="color:#E9E4D8">Journal</a><a href="about.html" style="color:#E9E4D8">Stores</a><a href="about.html" style="color:#E9E4D8">Careers</a>
+</nav>
+</div>
+<div class="wrap" style="margin-top:44px;padding-top:20px;border-top:1px solid #4A473F;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;font-size:12px;color:#A8A296">
+<span>© 2026 Folk &amp; Form · folknform.com</span>
+<span>UPI · Cards · Net banking · Wallets · Cash on delivery · EMI</span>
+<span><a href="help.html" style="color:#A8A296">Privacy</a> · <a href="help.html" style="color:#A8A296">Terms</a> · <a href="help.html" style="color:#A8A296">Cookies</a> · <a href="help.html" style="color:#A8A296">Booking policy</a></span>
+</div>
+</footer>
+</template>
+<template id="tpl-Main">
+<div style="width:100%;background:#F5F0E8">
+<div style="position:sticky;top:0;z-index:50;box-shadow:0 2px 12px rgba(38,37,31,.08)"><dc-import name="Header" hint-size="100%,112px"></dc-import></div>
+
+<h1 style="position:absolute;left:-9999px">Folk &amp; Form — clothes for teens, women and men</h1>
+<section aria-roledescription="carousel" aria-label="Featured collections" onMouseEnter="{{enter}}" onMouseLeave="{{leave}}" style="position:relative;overflow:hidden;height:560px;margin-bottom:72px;background:#E9E0D1">
+<div style="display:flex;height:100%;transform:translateX({{offset}});transition:transform 700ms ease">
+<sc-for list="{{slides}}" as="s" hint-placeholder-count="4">
+<div role="group" aria-roledescription="slide" aria-label="{{s.label}}" style="flex:0 0 100%;height:100%;display:flex;background:{{s.bg}}">
+<div style="flex:1 1 50%;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:20px;padding:48px 48px 48px 96px">
+<div class="eyebrow">{{s.eyebrow}}</div>
+<h2 class="serif" style="font-size:56px;line-height:1.04">{{s.title}}</h2>
+<p class="muted" style="font-size:17px;max-width:440px">{{s.text}}</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<a href="{{s.href}}" class="btn">{{s.cta}}</a>
+<a href="{{s.href2}}" class="btn btn-line">{{s.cta2}}</a>
+</div>
+</div>
+<div class="pic" style="flex:1 1 50%;min-width:0;height:100%"><img src="{{s.img}}" alt="{{s.alt}}"><span class="cap">{{s.tag}}</span></div>
+</div>
+</sc-for>
+</div>
+<button onClick="{{prev}}" aria-label="Previous slide" style="position:absolute;left:20px;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:1px solid #26251F;background:rgba(251,248,243,.92);color:#26251F;font-size:22px;cursor:pointer">‹</button>
+<button onClick="{{next}}" aria-label="Next slide" style="position:absolute;right:20px;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:1px solid #26251F;background:rgba(251,248,243,.92);color:#26251F;font-size:22px;cursor:pointer">›</button>
+<div style="position:absolute;left:96px;bottom:28px;display:flex;align-items:center;gap:8px">
+<button onClick="{{togglePause}}" aria-label="{{pauseLabel}}" style="width:44px;height:44px;border-radius:50%;border:1px solid #26251F;background:rgba(251,248,243,.92);color:#26251F;font-size:12px;cursor:pointer;margin-right:6px">{{pauseIcon}}</button>
+<sc-for list="{{dots}}" as="d" hint-placeholder-count="4"><button onClick="{{d.pick}}" aria-label="{{d.label}}" aria-current="{{d.current}}" style="width:{{d.w}};height:10px;border-radius:5px;border:0;padding:0;background:{{d.bg}};cursor:pointer;transition:width 300ms ease"></button></sc-for>
+</div>
+</section>
+
+<section class="wrap" style="padding-bottom:72px">
+<div style="display:flex;justify-content:space-between;align-items:end;margin-bottom:24px;flex-wrap:wrap;gap:12px">
+<h2 class="serif" style="font-size:36px">Shop by hub</h2>
+<a href="size-guide.html" class="small" style="text-decoration:underline">Find your size</a>
+</div>
+<div class="grid3">
+<a href="hub-women.html" style="display:flex;flex-direction:column;gap:12px"><div class="pic" style="height:380px"><img src="images/s-woman-dress.svg" alt="Women's collection"></div><div style="display:flex;justify-content:space-between"><span class="serif" style="font-size:24px">Women</span><span class="small muted">20–60 · Professional &amp; Casual</span></div></a>
+<a href="hub-women.html" style="display:flex;flex-direction:column;gap:12px"><div class="pic" style="height:380px"><img src="images/s-man-suit.svg" alt="Men's collection"></div><div style="display:flex;justify-content:space-between"><span class="serif" style="font-size:24px">Men</span><span class="small muted">20–60 · Professional &amp; Casual</span></div></a>
+<a href="hub-women.html" style="display:flex;flex-direction:column;gap:12px"><div class="pic" style="height:380px"><img src="images/s-teen.svg" alt="Teens collection"></div><div style="display:flex;justify-content:space-between"><span class="serif" style="font-size:24px">Teens</span><span class="small muted">13–19 · College &amp; weekend</span></div></a>
+</div>
+</section>
+
+<section class="wrap" style="padding-bottom:72px">
+<div class="grid2">
+<a href="listing.html" class="ph dark" style="height:300px;flex-direction:column;align-items:flex-start;justify-content:flex-end;gap:8px;padding:32px"><span class="eyebrow" style="color:#C9C3B5">The Work edit</span><span class="serif" style="font-size:34px;color:#FBF8F3">Tailoring that breathes</span><span style="font-size:14px;color:#E9E4D8;border-bottom:1px solid #E9E4D8">Shop Professional</span></a>
+<a href="listing.html" class="ph clay" style="height:300px;flex-direction:column;align-items:flex-start;justify-content:flex-end;gap:8px;padding:32px"><span class="eyebrow">The Weekend edit</span><span class="serif" style="font-size:34px;color:#26251F">Soft layers, easy fits</span><span style="font-size:14px;color:#26251F;border-bottom:1px solid #26251F">Shop Casual</span></a>
+</div>
+</section>
+
+<section class="wrap" style="padding-bottom:72px">
+<div style="display:flex;justify-content:space-between;align-items:end;margin-bottom:24px">
+<h2 class="serif" style="font-size:36px">New in</h2>
+<a href="listing.html" class="small" style="text-decoration:underline">View all</a>
+</div>
+<div class="grid4">
+<sc-for list="{{products}}" as="p" hint-placeholder-count="4">
+<a href="product.html" style="display:flex;flex-direction:column;gap:8px">
+<div class="pic" style="aspect-ratio:3/4"><img src="{{p.img}}" alt="{{p.name}}"><span class="badge">{{p.badge}}</span></div>
+<div style="display:flex;justify-content:space-between;gap:8px"><span>{{p.name}}</span><span class="price">{{p.price}}</span></div>
+<div class="small muted">{{p.line}}</div>
+</a>
+</sc-for>
+</div>
+</section>
+
+<section style="background:#4F5D43;color:#FBF8F3;padding:64px 0;margin-bottom:72px">
+<div class="wrap" style="display:flex;flex-wrap:wrap;gap:40px;align-items:center">
+<div style="flex:1 1 420px;display:flex;flex-direction:column;gap:14px">
+<div class="eyebrow" style="color:#D6DBCB">Personal styling</div>
+<h2 class="serif" style="font-size:42px;line-height:1.1">A stylist, in store or on video.</h2>
+<p style="color:#E3E6D9;max-width:460px">Build a work capsule, plan a festive look, or sort your wardrobe in an hour. Your stylist sends the picks straight to your account.</p>
+</div>
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<a href="booking.html" class="btn" style="background:#FBF8F3;color:#26251F;border-color:#FBF8F3">Book a session</a>
+<a href="styling.html" class="btn btn-line" style="color:#FBF8F3;border-color:#FBF8F3">How it works</a>
+</div>
+</div>
+</section>
+
+<section class="wrap" style="padding-bottom:72px">
+<h2 class="serif" style="font-size:36px;margin-bottom:24px">Lookbook: Monday to Sunday</h2>
+<div class="grid3">
+<a href="product.html" style="display:flex;flex-direction:column;gap:10px"><div class="pic" style="height:440px"><img src="images/s-duo.svg" alt="Two people in workwear"><span class="cap">Look 01 · The commute</span></div><span class="small" style="text-decoration:underline">Shop the look · 4 pieces from ₹8,980</span></a>
+<a href="product.html" style="display:flex;flex-direction:column;gap:10px"><div class="pic" style="height:440px"><img src="images/s-woman-dress.svg" alt="Woman in a terracotta dress"><span class="cap">Look 02 · Lunch to late meeting</span></div><span class="small" style="text-decoration:underline">Shop the look · 3 pieces from ₹6,680</span></a>
+<a href="product.html" style="display:flex;flex-direction:column;gap:10px"><div class="pic" style="height:440px"><img src="images/s-trio.svg" alt="Three people in weekend clothes"><span class="cap">Look 03 · Slow Sunday</span></div><span class="small" style="text-decoration:underline">Shop the look · 4 pieces from ₹7,470</span></a>
+</div>
+</section>
+
+<section class="wrap" style="padding-bottom:72px">
+<h2 class="serif" style="font-size:36px;margin-bottom:24px">What customers say</h2>
+<div class="grid3">
+<div class="card" style="display:flex;flex-direction:column;gap:12px"><div aria-label="5 stars" style="color:#4F5D43;letter-spacing:2px">★★★★★</div><p class="serif" style="font-size:19px">“The linen shirt survived a 12-hour workday and still looked pressed. Ordered a second colour.”</p><div class="small muted">Priya S., Guwahati · Verified buyer</div></div>
+<div class="card" style="display:flex;flex-direction:column;gap:12px"><div aria-label="5 stars" style="color:#4F5D43;letter-spacing:2px">★★★★★</div><p class="serif" style="font-size:19px">“Finally trousers with a real waist size. The size exchange took two days.”</p><div class="small muted">Rahul M., Shillong · Verified buyer</div></div>
+<div class="card" style="display:flex;flex-direction:column;gap:12px"><div aria-label="5 stars" style="color:#4F5D43;letter-spacing:2px">★★★★★</div><p class="serif" style="font-size:19px">“My stylist built ten office outfits from eight pieces. Best hour I’ve spent shopping.”</p><div class="small muted">Ankita D., Guwahati · Styling client</div></div>
+</div>
+</section>
+
+<section style="border-top:1px solid #DDD5C7;border-bottom:1px solid #DDD5C7;background:#FBF8F3">
+<div class="wrap grid4" style="padding-top:28px;padding-bottom:28px">
+<div><div style="font-weight:700">Easy returns</div><div class="small muted">15-day returns &amp; size exchanges</div></div>
+<div><div style="font-weight:700">Pay your way</div><div class="small muted">UPI, cards, net banking, COD</div></div>
+<div><div style="font-weight:700">Free styling</div><div class="small muted">In store or on video</div></div>
+<div><div style="font-weight:700">Sizes XS–3XL</div><div class="small muted">Regular, relaxed &amp; slim fits</div></div>
+</div>
+</section>
+
+<dc-import name="Footer" hint-size="100%,420px"></dc-import>
+</div>
+</template>
+<script src="assets/dc-runtime.js"></script>
+<script>
+window.DC_IMAGES = {"0a5a91c1978472a6a63392ef61d9e03d":"images/p-belt.svg","5f06fcb7b57a96cc9bf01c913a4bd3b0":"images/p-blazer-dark.svg","8548b627c2ede5716356e827cba4afb1":"images/p-blazer.svg","405eb3754825ef2065cb32d5eb3a2f0e":"images/p-blouse.svg","75ba8083572feb6c570a44c02408a536":"images/p-chino.svg","a09dff6fec776cbc65d017f2a2385355":"images/p-dress-shirt.svg","ca4e6c2b802d7c0d7400d2687d131b5a":"images/p-dress-tier.svg","bb2676bb82953c9b4ac9a480e942c2ef":"images/p-jeans.svg","7986fa0adc8356b1c35165207f01c2ed":"images/p-knit-oat.svg","fdc30acd247fb4616541596f28c27baf":"images/p-knit.svg","43a0dd193ffd4b438a8c113904142014":"images/p-loafer.svg","bc17760d122de30f31cea51732f0afb6":"images/p-overshirt-olive.svg","b7609bd6df1b7f220c37a983f41e1126":"images/p-overshirt.svg","08998cb4fc648039b515a3bb1cc2145a":"images/p-polo.svg","5c506d5ea511b727eec0a2e398831ef5":"images/p-scarf.svg","6753dadb7329ed49e396cfe21cfeecba":"images/p-shirt-ecru.svg","429eba4fce063b85e288bbceced236be":"images/p-shirt-navy.svg","2ae98cfc8e93c851770c8b3ad866392b":"images/p-shirt-rust.svg","a1b02ce1d53a103daf64a90197a767a4":"images/p-shirt-sage.svg","9a7531df94019645931f9e11a808d1b4":"images/p-shirt-stripe.svg","ba3677ff81245a3842f43c2821694e6f":"images/p-tee-white.svg","d69e07880dd9291596554e9cddb3931b":"images/p-tee.svg","c6fda341961213f729b78fe72922ad0c":"images/p-tote.svg","864029471cec5d35eaab4fb37e50b988":"images/p-trouser-olive.svg","9f2fba091b57283d303e0e3e3ab0b152":"images/p-trouser-stone.svg","f037a18b30f07369202c33bbd24e4cf1":"images/s-duo.svg","9cd5cf73faefde3e5283459685b8591b":"images/s-man-cafe.svg","3a8c2dd9822ace0d05cc5240a05cf613":"images/s-man-suit.svg","c530f8ade21e65f27d2c4b054eb20b2c":"images/s-stylist.svg","1abe807593ab673c0df3304fbcf6a7c9":"images/s-teen.svg","b68ce9ef353b8386d2abcde0e995202f":"images/s-trio.svg","f6c03ffc8b9ff813299635c13fac3b6a":"images/s-woman-dress.svg","138c22cbc284c611bea5f5782b2426ca":"images/s-woman-weekend.svg","c6fe75be85eec019bee7f4251405fcb4":"images/s-woman-work.svg"};
+DC.define("Header", (function () {
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+return Component;
+})());
+DC.define("Footer", (function () {
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+return Component;
+})());
+DC.define("Main", (function () {
+class Component extends DCLogic {
+componentDidMount() {
+this.timer = setInterval(() => {
+const st = this.state || {};
+if (st.paused || st.hover) return;
+this.setState({ i: ((st.i || 0) + 1) % 4 });
+}, 4500);
+}
+componentWillUnmount() { clearInterval(this.timer); }
+renderVals() {
+const st = this.state || {};
+const i = st.i || 0;
+const go = (n) => this.setState({ i: (n + 4) % 4 });
+const B = (id) => DC.img(id);
+const data = [
+{ eyebrow: 'Autumn–Winter 2026', title: 'Dressed for the desk, made for the weekend.', text: 'Quiet, well-cut clothes for teens, women and men — one wardrobe from Monday meetings to Sunday markets.', cta: 'Shop Women', href: 'hub-women.html', cta2: 'Shop Men', href2: 'hub-women.html', img: B('c6fe75be85eec019bee7f4251405fcb4'), alt: 'Woman in a camel blazer and olive wide trousers', tag: 'Soft-shoulder Blazer · ₹5,490', bg: '#E9E0D1' },
+{ eyebrow: 'The Work edit', title: 'Tailoring that breathes.', text: 'Linen shirts from ₹2,190, wool-blend suiting and blazers from ₹5,490 — cut in regular and relaxed fits.', cta: 'Shop Professional', href: 'listing.html', cta2: 'Size guide', href2: 'size-guide.html', img: B('3a8c2dd9822ace0d05cc5240a05cf613'), alt: 'Man in a navy suit', tag: 'Navy Wool-blend Suit · ₹9,990', bg: '#DADDE2' },
+{ eyebrow: 'The Weekend edit', title: 'Soft layers, easy fits.', text: 'Organic tees from ₹1,190, straight-leg denim and knits made for slow Sundays.', cta: 'Shop Casual', href: 'listing.html', cta2: 'Shop Teens', href2: 'hub-women.html', img: B('138c22cbc284c611bea5f5782b2426ca'), alt: 'Woman in a white tee and jeans', tag: 'Organic Cotton Tee · ₹1,190', bg: '#EAD8CA' },
+{ eyebrow: 'Personal styling', title: 'Your wardrobe, sorted in an hour.', text: 'A free 60-minute session with a stylist, in store in Guwahati or on video. Your picks land in your account.', cta: 'Book a stylist', href: 'booking.html', cta2: 'How it works', href2: 'styling.html', img: B('c530f8ade21e65f27d2c4b054eb20b2c'), alt: 'A stylist with a client beside a clothes rail', tag: 'Free · 60 min', bg: '#DDE2D2' }
+];
+return {
+slides: data.map((s, k) => ({ ...s, label: (k + 1) + ' of 4' })),
+dots: data.map((s, k) => ({ label: 'Go to slide ' + (k + 1), current: k === i ? 'true' : 'false', w: k === i ? '28px' : '10px', bg: k === i ? '#26251F' : 'rgba(38,37,31,.3)', pick: () => go(k) })),
+offset: (-i * 100) + '%',
+prev: () => go(i - 1), next: () => go(i + 1),
+pauseLabel: st.paused ? 'Play slideshow' : 'Pause slideshow', pauseIcon: st.paused ? '▶' : '❚❚',
+togglePause: () => this.setState({ paused: !st.paused }),
+enter: () => this.setState({ hover: true }), leave: () => this.setState({ hover: false }),
+products: [
+{ name: 'Linen Workday Shirt', price: '₹2,490', line: 'Women · Professional', img: 'images/p-shirt-ecru.svg', badge: 'New' },
+{ name: 'Pleated Wide Trouser', price: '₹3,290', line: 'Women · Professional', img: 'images/p-trouser-olive.svg', badge: 'New' },
+{ name: 'Brushed Cotton Overshirt', price: '₹2,990', line: 'Men · Casual', img: 'images/p-overshirt.svg', badge: 'New' },
+{ name: 'Relaxed Knit Polo', price: '₹1,890', line: 'Men · Casual', img: 'images/p-polo.svg', badge: 'New' }
+]
+};
+}
+}
+return Component;
+})());
+DC.mount("Main");
+</script>
+</body>
+</html>

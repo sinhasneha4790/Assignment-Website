@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Payment didn’t go through — Folk &amp; Form</title>
+<link rel="stylesheet" href="assets/ff.css">
+<link rel="stylesheet" href="assets/responsive.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap">
+<style>body{margin:0}</style>
+</head>
+<body>
+<div id="app"></div>
+<noscript><p style="padding:24px">Please turn on JavaScript to view this page.</p></noscript>
+<template id="tpl-PaymentFailed">
+<div style="width:100%;background:#F5F0E8">
+<header style="background:#FBF8F3;border-bottom:1px solid #DDD5C7;position:sticky;top:0;z-index:50"><div class="wrap" style="display:flex;align-items:center;min-height:72px"><a href="index.html" class="serif" style="font-size:28px">Folk &amp; Form</a></div></header>
+<section class="wrap" style="max-width:680px;padding-top:72px;padding-bottom:80px;display:flex;flex-direction:column;gap:22px;align-items:center;text-align:center">
+<span style="width:64px;height:64px;border-radius:50%;background:#F1E1D3;color:#8A4A2B;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:700" aria-hidden="true">!</span>
+<h1 class="serif" style="font-size:40px">Your payment didn’t go through</h1>
+<p class="muted">The UPI request timed out. No money was taken — if it was, it’s refunded automatically within 5–7 working days. Your bag is saved.</p>
+<div class="card" style="width:100%;display:flex;justify-content:space-between;text-align:left;flex-wrap:wrap;gap:12px"><span><b>2 items</b> · Linen Workday Shirt, Pleated Wide Trouser</span><span class="price">₹5,780</span></div>
+<div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+<a href="checkout.html" class="btn">Try UPI again</a>
+<a href="checkout.html" class="btn btn-line">Choose another method</a>
+<a href="checkout.html" class="btn btn-line">Pay cash on delivery</a>
+</div>
+<a href="help.html" class="small" style="text-decoration:underline">Need help? Chat with us</a>
+</section>
+</div>
+</template>
+<script src="assets/dc-runtime.js"></script>
+<script>
+window.DC_IMAGES = {"0a5a91c1978472a6a63392ef61d9e03d":"images/p-belt.svg","5f06fcb7b57a96cc9bf01c913a4bd3b0":"images/p-blazer-dark.svg","8548b627c2ede5716356e827cba4afb1":"images/p-blazer.svg","405eb3754825ef2065cb32d5eb3a2f0e":"images/p-blouse.svg","75ba8083572feb6c570a44c02408a536":"images/p-chino.svg","a09dff6fec776cbc65d017f2a2385355":"images/p-dress-shirt.svg","ca4e6c2b802d7c0d7400d2687d131b5a":"images/p-dress-tier.svg","bb2676bb82953c9b4ac9a480e942c2ef":"images/p-jeans.svg","7986fa0adc8356b1c35165207f01c2ed":"images/p-knit-oat.svg","fdc30acd247fb4616541596f28c27baf":"images/p-knit.svg","43a0dd193ffd4b438a8c113904142014":"images/p-loafer.svg","bc17760d122de30f31cea51732f0afb6":"images/p-overshirt-olive.svg","b7609bd6df1b7f220c37a983f41e1126":"images/p-overshirt.svg","08998cb4fc648039b515a3bb1cc2145a":"images/p-polo.svg","5c506d5ea511b727eec0a2e398831ef5":"images/p-scarf.svg","6753dadb7329ed49e396cfe21cfeecba":"images/p-shirt-ecru.svg","429eba4fce063b85e288bbceced236be":"images/p-shirt-navy.svg","2ae98cfc8e93c851770c8b3ad866392b":"images/p-shirt-rust.svg","a1b02ce1d53a103daf64a90197a767a4":"images/p-shirt-sage.svg","9a7531df94019645931f9e11a808d1b4":"images/p-shirt-stripe.svg","ba3677ff81245a3842f43c2821694e6f":"images/p-tee-white.svg","d69e07880dd9291596554e9cddb3931b":"images/p-tee.svg","c6fda341961213f729b78fe72922ad0c":"images/p-tote.svg","864029471cec5d35eaab4fb37e50b988":"images/p-trouser-olive.svg","9f2fba091b57283d303e0e3e3ab0b152":"images/p-trouser-stone.svg","f037a18b30f07369202c33bbd24e4cf1":"images/s-duo.svg","9cd5cf73faefde3e5283459685b8591b":"images/s-man-cafe.svg","3a8c2dd9822ace0d05cc5240a05cf613":"images/s-man-suit.svg","c530f8ade21e65f27d2c4b054eb20b2c":"images/s-stylist.svg","1abe807593ab673c0df3304fbcf6a7c9":"images/s-teen.svg","b68ce9ef353b8386d2abcde0e995202f":"images/s-trio.svg","f6c03ffc8b9ff813299635c13fac3b6a":"images/s-woman-dress.svg","138c22cbc284c611bea5f5782b2426ca":"images/s-woman-weekend.svg","c6fe75be85eec019bee7f4251405fcb4":"images/s-woman-work.svg"};
+DC.define("PaymentFailed", (function () {
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+return Component;
+})());
+DC.mount("PaymentFailed");
+</script>
+</body>
+</html>
