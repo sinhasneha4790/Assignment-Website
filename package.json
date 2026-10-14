@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "vercel-build": "prisma generate && (test -z \"$DATABASE_URL\" || prisma migrate deploy) && next build",
+    "vercel-build": "prisma generate && (test -z \"$DATABASE_URL\" || prisma migrate deploy) && (test \"$SEED_ON_DEPLOY\" != \"true\" || prisma db seed) && next build",
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",

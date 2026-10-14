@@ -64,4 +64,4 @@ tests/unit, tests/e2e
 
 ## Deploying
 
-Every push to `main` deploys to production on Vercel; every pull request gets a preview URL. The Vercel build runs `npm run vercel-build` (`prisma generate`, `prisma migrate deploy`, `next build`).
+Every push to `main` deploys to production on Vercel; every pull request gets a preview URL. The Vercel build runs `npm run vercel-build` (`prisma generate`, `prisma migrate deploy`, `next build`). Set `SEED_ON_DEPLOY=true` for one deploy to load the sample catalogue (the seed is idempotent but resets sample stock and reviews, so remove the variable afterwards).
