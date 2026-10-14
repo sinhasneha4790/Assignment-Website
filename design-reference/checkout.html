@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout — Folk &amp; Form</title>
+<link rel="stylesheet" href="assets/ff.css">
+<link rel="stylesheet" href="assets/responsive.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap">
+<style>body{margin:0}</style>
+</head>
+<body>
+<div id="app"></div>
+<noscript><p style="padding:24px">Please turn on JavaScript to view this page.</p></noscript>
+<template id="tpl-Checkout">
+<div style="width:100%;background:#F5F0E8">
+<header style="background:#FBF8F3;border-bottom:1px solid #DDD5C7;position:sticky;top:0;z-index:50">
+<div class="wrap" style="display:flex;justify-content:space-between;align-items:center;min-height:72px">
+<a href="index.html" class="serif" style="font-size:28px">Folk &amp; Form</a>
+<span class="small" style="display:flex;align-items:center;gap:8px;font-weight:600"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="1"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>Secure checkout</span>
+</div>
+</header>
+<div class="wrap" style="padding-top:28px">
+<ol aria-label="Checkout steps" style="list-style:none;margin:0;padding:0;display:flex;gap:12px;flex-wrap:wrap;font-size:13px;font-weight:600">
+<li style="display:flex;align-items:center;gap:8px"><span style="width:26px;height:26px;border-radius:50%;background:#4F5D43;color:#fff;display:flex;align-items:center;justify-content:center">✓</span>Bag</li>
+<li style="color:#BDB4A4">—</li>
+<li style="display:flex;align-items:center;gap:8px"><span style="width:26px;height:26px;border-radius:50%;background:#26251F;color:#fff;display:flex;align-items:center;justify-content:center">2</span>Details &amp; delivery</li>
+<li style="color:#BDB4A4">—</li>
+<li style="display:flex;align-items:center;gap:8px"><span style="width:26px;height:26px;border-radius:50%;background:#26251F;color:#fff;display:flex;align-items:center;justify-content:center">3</span>Payment</li>
+</ol>
+</div>
+
+<section class="wrap" style="padding-top:28px;padding-bottom:72px;display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
+<div style="flex:999 1 560px;min-width:0;display:flex;flex-direction:column;gap:24px">
+
+<div class="card" style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;border-color:#4F5D43;border-width:2px">
+<div style="flex:1 1 280px"><div style="font-weight:700">Continue as guest</div><div class="small muted">No account needed. You can save your details after ordering.</div></div>
+<div class="small">Have an account? <a href="login.html" style="text-decoration:underline;font-weight:600">Log in</a> or <a href="login.html" style="text-decoration:underline;font-weight:600">get a one-time code</a></div>
+</div>
+
+<div class="card">
+<h2 class="serif" style="font-size:24px;margin-bottom:16px">Contact</h2>
+<div class="grid2" style="gap:16px">
+<div class="field"><label for="em">Email</label><input id="em" type="email" placeholder="you@example.com"></div>
+<div class="field"><label for="ph">Mobile number</label><input id="ph" type="tel" placeholder="+91"></div>
+</div>
+<label class="check"><input type="checkbox" checked=""> Send order updates on WhatsApp</label>
+</div>
+
+<div class="card">
+<h2 class="serif" style="font-size:24px;margin-bottom:16px">Delivery address</h2>
+<div class="grid2" style="gap:16px">
+<div class="field"><label for="nm">Full name</label><input id="nm"></div>
+<div class="field"><label for="pc">PIN code</label><input id="pc" inputmode="numeric" value="781001"></div>
+</div>
+<div class="field"><label for="a1">Flat, house, building</label><input id="a1"></div>
+<div class="field"><label for="a2">Area, street, landmark</label><input id="a2"></div>
+<div class="grid2" style="gap:16px">
+<div class="field"><label for="ct">City</label><input id="ct" value="Guwahati"></div>
+<div class="field"><label for="sta">State</label><input id="sta" value="Assam"></div>
+</div>
+<div class="small muted">City and state fill in from your PIN code.</div>
+</div>
+
+<div class="card">
+<h2 class="serif" style="font-size:24px;margin-bottom:12px">Delivery method</h2>
+<label class="check" style="padding:12px;border:1px solid #DDD5C7;justify-content:space-between"><span style="display:flex;gap:10px;align-items:center"><input type="radio" name="dm" checked=""> Standard · 3–5 days</span><span>Free</span></label>
+<label class="check" style="padding:12px;border:1px solid #DDD5C7;justify-content:space-between;margin-top:8px"><span style="display:flex;gap:10px;align-items:center"><input type="radio" name="dm"> Express · 1–2 days</span><span>₹149</span></label>
+<label class="check" style="padding:12px;border:1px solid #DDD5C7;justify-content:space-between;margin-top:8px"><span style="display:flex;gap:10px;align-items:center"><input type="radio" name="dm"> Pick up from store</span><span>Free</span></label>
+</div>
+
+<div class="card">
+<h2 class="serif" style="font-size:24px;margin-bottom:12px">Payment</h2>
+<div role="radiogroup" aria-label="Payment method" style="display:flex;flex-direction:column;gap:8px">
+<sc-for list="{{methods}}" as="m" hint-placeholder-count="6">
+<button role="radio" aria-checked="{{m.checked}}" onClick="{{m.pick}}" style="text-align:left;display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:56px;padding:0 16px;border:{{m.border}};background:{{m.bg}};cursor:pointer;font:15px 'Manrope',sans-serif;color:#26251F;border-radius:2px">
+<span><b>{{m.name}}</b> <span class="small muted">{{m.note}}</span></span><span aria-hidden="true">{{m.dot}}</span>
+</button>
+</sc-for>
+</div>
+<sc-if value="{{isUpi}}" hint-placeholder-val="{{ true }}">
+<div style="margin-top:16px;display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end">
+<div style="flex:1 1 260px"><label for="upi">UPI ID</label><input id="upi" placeholder="name@bank"></div>
+<span class="small muted" style="padding-bottom:14px">or scan a QR code on the next screen</span>
+</div>
+</sc-if>
+<sc-if value="{{isCard}}" hint-placeholder-val="{{ false }}">
+<div class="small muted" style="margin-top:16px">Card details are entered on the payment gateway’s secure page. Saved cards are tokenised.</div>
+</sc-if>
+<sc-if value="{{isCod}}" hint-placeholder-val="{{ false }}">
+<div class="small muted" style="margin-top:16px">Pay cash or UPI to the delivery partner. A ₹49 COD fee applies.</div>
+</sc-if>
+</div>
+</div>
+
+<aside style="flex:1 1 340px;display:flex;flex-direction:column;gap:16px">
+<div class="card" style="display:flex;flex-direction:column;gap:14px">
+<h2 class="serif" style="font-size:22px">Order summary</h2>
+<div style="display:flex;gap:12px;align-items:center"><div class="pic" style="width:56px;height:72px;flex:none"><img src="images/p-shirt-ecru.svg" alt=""></div><div style="flex:1" class="small"><b>Linen Workday Shirt</b><br>Ecru · M · Qty 1</div><span class="small price">₹2,490</span></div>
+<div style="display:flex;gap:12px;align-items:center"><div class="pic" style="width:56px;height:72px;flex:none"><img src="images/p-trouser-olive.svg" alt=""></div><div style="flex:1" class="small"><b>Pleated Wide Trouser</b><br>Olive · 30 · Qty 1</div><span class="small price">₹3,290</span></div>
+<hr class="rule">
+<div style="display:flex;justify-content:space-between" class="small"><span>Subtotal</span><span>₹5,780</span></div>
+<div style="display:flex;justify-content:space-between" class="small"><span>Delivery</span><span>Free</span></div>
+<div style="display:flex;justify-content:space-between;font-weight:700;font-size:18px"><span>Total</span><span>₹5,780</span></div>
+<a href="confirmation.html" class="btn btn-block">{{payLabel}}</a>
+<a href="payment-failed.html" class="small muted" style="text-align:center;text-decoration:underline">Preview: payment fails</a>
+<div class="small muted" style="text-align:center">By placing the order you agree to our <a href="help.html" style="text-decoration:underline;color:#5C584E">Terms</a> and <a href="help.html" style="text-decoration:underline;color:#5C584E">Privacy policy</a>.</div>
+</div>
+</aside>
+</section>
+</div>
+</template>
+<script src="assets/dc-runtime.js"></script>
+<script>
+window.DC_IMAGES = {"0a5a91c1978472a6a63392ef61d9e03d":"images/p-belt.svg","5f06fcb7b57a96cc9bf01c913a4bd3b0":"images/p-blazer-dark.svg","8548b627c2ede5716356e827cba4afb1":"images/p-blazer.svg","405eb3754825ef2065cb32d5eb3a2f0e":"images/p-blouse.svg","75ba8083572feb6c570a44c02408a536":"images/p-chino.svg","a09dff6fec776cbc65d017f2a2385355":"images/p-dress-shirt.svg","ca4e6c2b802d7c0d7400d2687d131b5a":"images/p-dress-tier.svg","bb2676bb82953c9b4ac9a480e942c2ef":"images/p-jeans.svg","7986fa0adc8356b1c35165207f01c2ed":"images/p-knit-oat.svg","fdc30acd247fb4616541596f28c27baf":"images/p-knit.svg","43a0dd193ffd4b438a8c113904142014":"images/p-loafer.svg","bc17760d122de30f31cea51732f0afb6":"images/p-overshirt-olive.svg","b7609bd6df1b7f220c37a983f41e1126":"images/p-overshirt.svg","08998cb4fc648039b515a3bb1cc2145a":"images/p-polo.svg","5c506d5ea511b727eec0a2e398831ef5":"images/p-scarf.svg","6753dadb7329ed49e396cfe21cfeecba":"images/p-shirt-ecru.svg","429eba4fce063b85e288bbceced236be":"images/p-shirt-navy.svg","2ae98cfc8e93c851770c8b3ad866392b":"images/p-shirt-rust.svg","a1b02ce1d53a103daf64a90197a767a4":"images/p-shirt-sage.svg","9a7531df94019645931f9e11a808d1b4":"images/p-shirt-stripe.svg","ba3677ff81245a3842f43c2821694e6f":"images/p-tee-white.svg","d69e07880dd9291596554e9cddb3931b":"images/p-tee.svg","c6fda341961213f729b78fe72922ad0c":"images/p-tote.svg","864029471cec5d35eaab4fb37e50b988":"images/p-trouser-olive.svg","9f2fba091b57283d303e0e3e3ab0b152":"images/p-trouser-stone.svg","f037a18b30f07369202c33bbd24e4cf1":"images/s-duo.svg","9cd5cf73faefde3e5283459685b8591b":"images/s-man-cafe.svg","3a8c2dd9822ace0d05cc5240a05cf613":"images/s-man-suit.svg","c530f8ade21e65f27d2c4b054eb20b2c":"images/s-stylist.svg","1abe807593ab673c0df3304fbcf6a7c9":"images/s-teen.svg","b68ce9ef353b8386d2abcde0e995202f":"images/s-trio.svg","f6c03ffc8b9ff813299635c13fac3b6a":"images/s-woman-dress.svg","138c22cbc284c611bea5f5782b2426ca":"images/s-woman-weekend.svg","c6fe75be85eec019bee7f4251405fcb4":"images/s-woman-work.svg"};
+DC.define("Checkout", (function () {
+class Component extends DCLogic {
+renderVals() {
+const cur = (this.state && this.state.m) || 'upi';
+const list = [
+{ id: 'upi', name: 'UPI', note: 'GPay, PhonePe, Paytm, any UPI app' },
+{ id: 'card', name: 'Credit / debit card', note: 'Visa, Mastercard, RuPay' },
+{ id: 'nb', name: 'Net banking', note: 'All major banks' },
+{ id: 'wallet', name: 'Wallets', note: 'Paytm, Amazon Pay' },
+{ id: 'emi', name: 'EMI / Pay later', note: 'No-cost EMI above ₹3,000' },
+{ id: 'cod', name: 'Cash on delivery', note: 'Cash or UPI at your door' }
+];
+const methods = list.map((m) => ({ name: m.name, note: m.note, checked: m.id === cur ? 'true' : 'false',
+border: m.id === cur ? '2px solid #26251F' : '1px solid #DDD5C7', bg: m.id === cur ? '#FFFFFF' : '#FBF8F3',
+dot: m.id === cur ? '●' : '○', pick: () => this.setState({ m: m.id }) }));
+return { methods, isUpi: cur === 'upi', isCard: cur === 'card', isCod: cur === 'cod',
+payLabel: cur === 'cod' ? 'Place order · ₹5,780' : 'Pay ₹5,780 securely' };
+}
+}
+return Component;
+})());
+DC.mount("Checkout");
+</script>
+</body>
+</html>

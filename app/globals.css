@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+/*
+ * Folk & Form design tokens (spec §4). Define colours here once; components use
+ * the Tailwind utilities these generate (bg-cream, text-ink, border-line…), never raw hex.
+ */
+@theme {
+  --color-cream: #f5f0e8;
+  --color-paper: #fbf8f3;
+  --color-ink: #26251f;
+  --color-muted: #5c584e;
+  --color-line: #ddd5c7;
+  --color-olive: #4f5d43;
+  --color-olive-soft: #e3e6d9;
+  --color-clay: #9a5534;
+  --color-sand: #e9e0d1;
+  --color-warn-bg: #f1e1d3;
+  --color-warn-fg: #8a4a2b;
+
+  /* Supporting shades taken from the mockup */
+  --color-field: #bdb4a4; /* input and size-button borders */
+  --color-faint: #9c968a; /* sold-out text */
+  --color-neutral-bg: #ece7de; /* grey pill */
+  --color-ph-dark: #3a3b31;
+  --color-ph-clay: #e6d2c2;
+  --color-ph-olive: #cdd2bf;
+  --color-ph-stone: #d9d3c7;
+  --color-olive-tint: #d6dbcb; /* eyebrow on olive */
+  --color-on-dark: #e9e4d8; /* footer links */
+  --color-on-dark-soft: #c9c3b5;
+  --color-on-dark-muted: #a8a296;
+  --color-on-dark-line: #4a473f;
+  --color-on-dark-field: #6e6a5e;
+
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-manrope), system-ui, sans-serif;
+
+  /* 760 px: header collapses to phone layout. 900 px: grids collapse (4→2, 3→1). */
+  --breakpoint-sm: 760px;
+  --breakpoint-md: 900px;
+
+  --radius-control: 2px;
+  --radius-card: 4px;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:hover {
+    color: var(--color-olive);
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: inherit;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-olive);
+    outline-offset: 2px;
+  }
+  input[type="checkbox"],
+  input[type="radio"] {
+    accent-color: var(--color-olive);
+  }
+}
+
+@utility serif {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+@utility eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  font-weight: 600;
+}
+
+/* Content width 1200 px, 32 px side padding (16 px under 900 px). */
+@utility wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 32px;
+  @media (max-width: 899.98px) {
+    padding-inline: 16px;
+  }
+}
+
+@utility grid-cards {
+  display: grid;
+  gap: 24px;
+  @media (max-width: 899.98px) {
+    gap: 16px;
+  }
+}
+
+@utility sr-only-focusable {
+  position: absolute;
+  left: -9999px;
+  &:focus {
+    left: 16px;
+    top: 16px;
+    z-index: 100;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

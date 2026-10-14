@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Personal styling — Folk &amp; Form</title>
+<link rel="stylesheet" href="assets/ff.css">
+<link rel="stylesheet" href="assets/responsive.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap">
+<style>body{margin:0}</style>
+</head>
+<body>
+<div id="app"></div>
+<noscript><p style="padding:24px">Please turn on JavaScript to view this page.</p></noscript>
+<template id="tpl-Header">
+<header style="width:100%;background:#FBF8F3;border-bottom:1px solid #DDD5C7;font-family:'Manrope',sans-serif;color:#26251F">
+<div style="background:#26251F;color:#FBF8F3;text-align:center;font-size:12px;letter-spacing:.08em;padding:9px 16px">Free delivery over ₹2,999 · Pay by UPI, card or cash on delivery · Free styling sessions</div>
+<div class="wrap" style="display:flex;align-items:center;gap:28px;min-height:72px;flex-wrap:wrap;padding-top:4px;padding-bottom:4px">
+<a href="index.html" class="serif" style="font-size:28px;white-space:nowrap">Folk &amp; Form</a>
+<nav aria-label="Main" style="display:flex;gap:22px;flex-wrap:wrap;font-size:14px;font-weight:500;flex:1 1 380px">
+<a href="hub-women.html">Women</a>
+<a href="hub-women.html">Men</a>
+<a href="hub-women.html">Teens</a>
+<a href="listing.html">Work</a>
+<a href="listing.html">Weekend</a>
+<a href="listing.html">New in</a>
+<a href="listing.html" style="color:#9A5534">Sale</a>
+</nav>
+<div style="display:flex;align-items:center;gap:2px">
+<a href="styling.html" style="font-size:13px;font-weight:700;margin-right:10px;border-bottom:1px solid #26251F">Book a stylist</a>
+<a href="search.html" aria-label="Search" style="width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></a>
+<a href="login.html" aria-label="Account" style="width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg></a>
+<a href="account.html" aria-label="Wishlist" style="width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"></path></svg></a>
+<a href="cart.html" aria-label="Bag, 2 items" style="width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;position:relative"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg><span style="position:absolute;top:6px;right:4px;background:#4F5D43;color:#fff;font-size:10px;font-weight:700;min-width:16px;height:16px;border-radius:8px;display:flex;align-items:center;justify-content:center">2</span></a>
+</div>
+</div>
+</header>
+</template>
+<template id="tpl-Footer">
+<footer style="width:100%;background:#26251F;color:#E9E4D8;font-family:'Manrope',sans-serif;padding:56px 0 28px">
+<div class="wrap" style="display:flex;flex-wrap:wrap;gap:48px">
+<div style="flex:1 1 300px;display:flex;flex-direction:column;gap:14px">
+<div class="serif" style="font-size:30px;color:#FBF8F3">Folk &amp; Form</div>
+<p style="font-size:14px;color:#C9C3B5">Dressed for the desk, made for the weekend. New drops and styling notes, once a fortnight.</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<label for="ft-email" style="position:absolute;left:-9999px">Email address</label>
+<input id="ft-email" type="email" placeholder="Your email" style="flex:1 1 180px;background:transparent;color:#FBF8F3;border-color:#6E6A5E">
+<button class="btn" style="background:#FBF8F3;color:#26251F;border-color:#FBF8F3">Subscribe</button>
+</div>
+</div>
+<nav aria-label="Shop" style="flex:1 1 140px;display:flex;flex-direction:column;gap:10px;font-size:14px">
+<div class="eyebrow" style="color:#A8A296">Shop</div>
+<a href="hub-women.html" style="color:#E9E4D8">Women</a><a href="hub-women.html" style="color:#E9E4D8">Men</a><a href="hub-women.html" style="color:#E9E4D8">Teens</a><a href="listing.html" style="color:#E9E4D8">New in</a><a href="listing.html" style="color:#E9E4D8">Sale</a><a href="listing.html" style="color:#E9E4D8">Gift cards</a>
+</nav>
+<nav aria-label="Help" style="flex:1 1 140px;display:flex;flex-direction:column;gap:10px;font-size:14px">
+<div class="eyebrow" style="color:#A8A296">Help</div>
+<a href="help.html" style="color:#E9E4D8">Help centre</a><a href="help.html" style="color:#E9E4D8">Track order</a><a href="size-guide.html" style="color:#E9E4D8">Size guides</a><a href="help.html" style="color:#E9E4D8">Shipping</a><a href="help.html" style="color:#E9E4D8">Returns &amp; exchanges</a><a href="help.html" style="color:#E9E4D8">Contact us</a>
+</nav>
+<nav aria-label="Company" style="flex:1 1 140px;display:flex;flex-direction:column;gap:10px;font-size:14px">
+<div class="eyebrow" style="color:#A8A296">Folk &amp; Form</div>
+<a href="about.html" style="color:#E9E4D8">About us</a><a href="styling.html" style="color:#E9E4D8">Book a stylist</a><a href="about.html" style="color:#E9E4D8">Journal</a><a href="about.html" style="color:#E9E4D8">Stores</a><a href="about.html" style="color:#E9E4D8">Careers</a>
+</nav>
+</div>
+<div class="wrap" style="margin-top:44px;padding-top:20px;border-top:1px solid #4A473F;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;font-size:12px;color:#A8A296">
+<span>© 2026 Folk &amp; Form · folknform.com</span>
+<span>UPI · Cards · Net banking · Wallets · Cash on delivery · EMI</span>
+<span><a href="help.html" style="color:#A8A296">Privacy</a> · <a href="help.html" style="color:#A8A296">Terms</a> · <a href="help.html" style="color:#A8A296">Cookies</a> · <a href="help.html" style="color:#A8A296">Booking policy</a></span>
+</div>
+</footer>
+</template>
+<template id="tpl-Styling">
+<div style="width:100%;background:#F5F0E8">
+<div style="position:sticky;top:0;z-index:50;box-shadow:0 2px 12px rgba(38,37,31,.08)"><dc-import name="Header" hint-size="100%,112px"></dc-import></div>
+
+<section style="background:#4F5D43;color:#FBF8F3">
+<div class="wrap" style="display:flex;flex-wrap:wrap;gap:48px;align-items:center;padding-top:64px;padding-bottom:64px">
+<div style="flex:1 1 420px;display:flex;flex-direction:column;gap:18px">
+<div class="eyebrow" style="color:#D6DBCB">Personal styling</div>
+<h1 class="serif" style="font-size:58px;line-height:1.04">Your wardrobe, sorted in an hour.</h1>
+<p style="color:#E3E6D9;font-size:17px;max-width:460px">Meet a Folk &amp; Form stylist in store or on video. Tell us your week; leave with outfits that work for it — and no pressure to buy.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap"><a href="booking.html" class="btn" style="background:#FBF8F3;color:#26251F;border-color:#FBF8F3">Book a session</a><a href="#services" class="btn btn-line" style="color:#FBF8F3;border-color:#FBF8F3">See services</a></div>
+</div>
+<div class="pic" style="flex:1 1 460px;height:420px"><img src="images/s-stylist.svg" alt="A stylist with a client beside a clothes rail"></div>
+</div>
+</section>
+
+<section class="wrap" style="padding-top:64px;padding-bottom:64px">
+<h2 class="serif" style="font-size:34px;margin-bottom:24px">How it works</h2>
+<div class="grid3">
+<div class="stack" style="gap:10px"><span class="serif" style="font-size:44px;color:#4F5D43">01</span><b>Pick a time</b><span class="muted">Choose a service, in store or video, and a stylist who suits you.</span></div>
+<div class="stack" style="gap:10px"><span class="serif" style="font-size:44px;color:#4F5D43">02</span><b>Tell us about you</b><span class="muted">A 2-minute form: sizes, budget, colours, the occasions you dress for.</span></div>
+<div class="stack" style="gap:10px"><span class="serif" style="font-size:44px;color:#4F5D43">03</span><b>Get your looks</b><span class="muted">After the session your picks land in your account, ready to buy.</span></div>
+</div>
+</section>
+
+<section id="services" class="wrap" style="padding-bottom:64px">
+<h2 class="serif" style="font-size:34px;margin-bottom:24px">Services</h2>
+<div class="grid3">
+<sc-for list="{{services}}" as="s" hint-placeholder-count="6">
+<div class="card" style="display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;justify-content:space-between;gap:8px"><span class="pill {{s.pillCls}}">{{s.format}}</span><span class="small muted">{{s.length}}</span></div>
+<h3 class="serif" style="font-size:22px">{{s.name}}</h3>
+<p class="small muted">{{s.desc}}</p>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:8px"><span class="price">{{s.price}}</span><a href="booking.html" class="btn" style="min-height:44px;padding:0 18px">Book</a></div>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section class="wrap" style="padding-bottom:64px">
+<h2 class="serif" style="font-size:34px;margin-bottom:24px">Meet the stylists</h2>
+<div class="grid3">
+<div class="stack" style="gap:10px"><div class="pic" style="height:280px"><img src="images/s-woman-work.svg" alt="Meera Kalita"></div><b>Meera Kalita</b><span class="small muted">Workwear &amp; capsule wardrobes · English, Hindi, Assamese</span><span class="small">★ 4.9 · 312 sessions</span></div>
+<div class="stack" style="gap:10px"><div class="pic" style="height:280px"><img src="images/s-man-suit.svg" alt="Arjun Bora"></div><b>Arjun Bora</b><span class="small muted">Menswear &amp; tailoring · English, Assamese</span><span class="small">★ 4.8 · 204 sessions</span></div>
+<div class="stack" style="gap:10px"><div class="pic" style="height:280px"><img src="images/s-woman-dress.svg" alt="Riya Das"></div><b>Riya Das</b><span class="small muted">Festive, ethnic &amp; teen streetwear · English, Bengali</span><span class="small">★ 4.9 · 186 sessions</span></div>
+</div>
+</section>
+
+<section class="wrap" style="padding-bottom:72px;display:flex;flex-wrap:wrap;gap:48px">
+<div style="flex:1 1 300px"><h2 class="serif" style="font-size:34px">Questions</h2><p class="muted" style="margin-top:8px">Full details in our <a href="help.html" style="text-decoration:underline;color:#5C584E">booking &amp; cancellation policy</a>.</p></div>
+<div style="flex:2 1 520px">
+<details open=""><summary>Do I have to buy anything?</summary><p class="muted" style="margin-top:8px">No. Paid sessions come with credit you can spend on clothes within 30 days.</p></details>
+<details><summary>Can I book for my partner or teen?</summary><p class="muted" style="margin-top:8px">Yes — choose who it’s for when booking. Under-18s attend with a parent or guardian.</p></details>
+<details><summary>What if I need to reschedule?</summary><p class="muted" style="margin-top:8px">Reschedule or cancel free up to 24 hours before from your confirmation email.</p></details>
+<details><summary>What do I need for a video session?</summary><p class="muted" style="margin-top:8px">A phone or laptop, good light, and a few pieces you already own nearby.</p></details>
+</div>
+</section>
+<dc-import name="Footer" hint-size="100%,420px"></dc-import>
+</div>
+</template>
+<script src="assets/dc-runtime.js"></script>
+<script>
+window.DC_IMAGES = {"0a5a91c1978472a6a63392ef61d9e03d":"images/p-belt.svg","5f06fcb7b57a96cc9bf01c913a4bd3b0":"images/p-blazer-dark.svg","8548b627c2ede5716356e827cba4afb1":"images/p-blazer.svg","405eb3754825ef2065cb32d5eb3a2f0e":"images/p-blouse.svg","75ba8083572feb6c570a44c02408a536":"images/p-chino.svg","a09dff6fec776cbc65d017f2a2385355":"images/p-dress-shirt.svg","ca4e6c2b802d7c0d7400d2687d131b5a":"images/p-dress-tier.svg","bb2676bb82953c9b4ac9a480e942c2ef":"images/p-jeans.svg","7986fa0adc8356b1c35165207f01c2ed":"images/p-knit-oat.svg","fdc30acd247fb4616541596f28c27baf":"images/p-knit.svg","43a0dd193ffd4b438a8c113904142014":"images/p-loafer.svg","bc17760d122de30f31cea51732f0afb6":"images/p-overshirt-olive.svg","b7609bd6df1b7f220c37a983f41e1126":"images/p-overshirt.svg","08998cb4fc648039b515a3bb1cc2145a":"images/p-polo.svg","5c506d5ea511b727eec0a2e398831ef5":"images/p-scarf.svg","6753dadb7329ed49e396cfe21cfeecba":"images/p-shirt-ecru.svg","429eba4fce063b85e288bbceced236be":"images/p-shirt-navy.svg","2ae98cfc8e93c851770c8b3ad866392b":"images/p-shirt-rust.svg","a1b02ce1d53a103daf64a90197a767a4":"images/p-shirt-sage.svg","9a7531df94019645931f9e11a808d1b4":"images/p-shirt-stripe.svg","ba3677ff81245a3842f43c2821694e6f":"images/p-tee-white.svg","d69e07880dd9291596554e9cddb3931b":"images/p-tee.svg","c6fda341961213f729b78fe72922ad0c":"images/p-tote.svg","864029471cec5d35eaab4fb37e50b988":"images/p-trouser-olive.svg","9f2fba091b57283d303e0e3e3ab0b152":"images/p-trouser-stone.svg","f037a18b30f07369202c33bbd24e4cf1":"images/s-duo.svg","9cd5cf73faefde3e5283459685b8591b":"images/s-man-cafe.svg","3a8c2dd9822ace0d05cc5240a05cf613":"images/s-man-suit.svg","c530f8ade21e65f27d2c4b054eb20b2c":"images/s-stylist.svg","1abe807593ab673c0df3304fbcf6a7c9":"images/s-teen.svg","b68ce9ef353b8386d2abcde0e995202f":"images/s-trio.svg","f6c03ffc8b9ff813299635c13fac3b6a":"images/s-woman-dress.svg","138c22cbc284c611bea5f5782b2426ca":"images/s-woman-weekend.svg","c6fe75be85eec019bee7f4251405fcb4":"images/s-woman-work.svg"};
+DC.define("Header", (function () {
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+return Component;
+})());
+DC.define("Footer", (function () {
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+return Component;
+})());
+DC.define("Styling", (function () {
+class Component extends DCLogic {
+renderVals() {
+return { services: [
+{ name: 'Personal styling session', format: 'Store or video', length: '60 min', price: 'Free', desc: 'One-to-one advice on fit, colour and what to wear for your week.', pillCls: '' },
+{ name: 'Work capsule wardrobe', format: 'Store or video', length: '90 min', price: '₹1,499 · credit back', desc: 'Build 15–20 pieces that make a month of office outfits.', pillCls: '' },
+{ name: 'Wardrobe makeover', format: 'Home visit', length: '120 min', price: '₹2,999', desc: 'We edit your wardrobe with you and fill the gaps.', pillCls: 'warn' },
+{ name: 'Festive & wedding planning', format: 'In store', length: '90 min', price: '₹999 · credit back', desc: 'Outfits for every function, for you and your partner.', pillCls: 'grey' },
+{ name: 'Workwear wardrobe audit', format: 'Video', length: '45 min', price: 'Free', desc: 'Show us what you own; we tell you what to keep, pair and add.', pillCls: '' },
+{ name: 'Style workshop', format: 'In store · group', length: '2 hours', price: '₹799 per seat', desc: 'Small-group evenings on dressing for work, colour and layering.', pillCls: 'grey' }
+] };
+}
+}
+return Component;
+})());
+DC.mount("Styling");
+</script>
+</body>
+</html>

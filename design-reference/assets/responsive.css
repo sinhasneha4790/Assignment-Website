@@ -1,0 +1,30 @@
+/* Phone-size adjustments for the exported pages (the canvas artboards are desktop at 1280 px). */
+@media (max-width: 760px) {
+  /* Header: logo + icons on one row; the full menu lives in the hub chips and footer on phones. */
+  header nav[aria-label="Main"] { display: none !important; }
+  header .wrap { gap: 8px !important; justify-content: space-between; flex-wrap: nowrap !important; }
+  header .wrap > a.serif { font-size: 22px !important; }
+  header a[href="styling.html"] { display: none !important; }
+  header > div:first-child { font-size: 11px !important; }
+
+  /* Home carousel: image on top, text below. */
+  section[aria-roledescription="carousel"] { height: 640px !important; margin-bottom: 48px !important; }
+  [aria-roledescription="slide"] { flex-direction: column-reverse !important; }
+  [aria-roledescription="slide"] > div:first-child { padding: 20px 20px 88px !important; gap: 12px !important; justify-content: flex-start !important; flex: 1 1 auto !important; }
+  [aria-roledescription="slide"] > .pic { flex: 0 0 280px !important; height: 280px !important; }
+  [aria-roledescription="slide"] h2 { font-size: 30px !important; }
+  [aria-roledescription="slide"] p { font-size: 15px !important; }
+  section[aria-roledescription="carousel"] > button { top: 140px !important; width: 44px !important; height: 44px !important; }
+  section[aria-roledescription="carousel"] > div:last-child { left: 20px !important; bottom: 20px !important; }
+
+  /* Large display headings set inline on desktop. */
+  h1.serif { font-size: 38px !important; line-height: 1.1 !important; }
+  h2.serif { font-size: 26px !important; }
+  .wrap .pic[style*="height:520px"], .wrap .pic[style*="height:440px"], .wrap .pic[style*="height:420px"] { height: 320px !important; }
+  section .pic[style*="min-height:420px"] { min-height: 300px !important; }
+
+  /* Wide rows wrap instead of overflowing. */
+  [style*="padding:48px 48px 48px 96px"] { padding: 20px !important; }
+  aside[aria-label="Filters"] { max-width: none !important; }
+  .card { padding: 18px; }
+}
